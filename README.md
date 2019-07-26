@@ -34,11 +34,19 @@ Edit this document to include your answers after each question. Make sure to lea
 2. What is the difference between a function and a method?
    -A method is called on an object and can only be called on that object, while a function can be applied more freely.
 
-3. What is closure?
+3. What is closure? Closure defines the scope of the function. In example, function2 nested within function1 will have access to all of the variables declared in function1. However, function1 has no access to the variables in function2, as function1 is essentially closed off.
 
 4. Describe the four rules of the 'this' keyword.
+   -Implicit binding implies that whatever is left of the dot is what 'this' references.
+
+-Explicit binding explicitly states in the first parameter of the function what 'this' is referencing. A function is created in the global scope for later use in this case.
+
+-Window binding acts as a catch-all in the case that a function containing 'this' is called without stating what 'this' should refer to, binding it to the window by default.
+
+-New binding allows us to create an object by utilizing a function that contains the defining properties of what the objects should have. Ex: name, age, height, etc..
 
 5. Why do we need super() in an extended class?
+   super calls the constructor of the parent class, ensuring that the child class is able to receive the same properties.
 
 ## Project Set up
 
